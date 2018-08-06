@@ -21,3 +21,18 @@ X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 sc_y = StandardScaler()
 y_train = sc_y.fit_transform(y_train)"""
+
+'''
+The Simple Linear Regression will take care of feature scaling.
+However certain algorithm in scikit learn might not do the same 
+'''
+
+# Fitting Simple Linear Regression to the Training set
+from sklearn.linear_model import LinearRegression
+lregressor = LinearRegression()
+
+# Fit the training set onto our model regressor
+lregressor.fit(X_train, y_train)
+
+# Predicting the Test set results
+y_pred = lregressor.predict(X_test)
