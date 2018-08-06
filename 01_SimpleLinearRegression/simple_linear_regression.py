@@ -36,3 +36,12 @@ lregressor.fit(X_train, y_train)
 
 # Predicting the Test set results
 y_pred = lregressor.predict(X_test)
+
+# Visualize the predictions on Training dataset with graph
+plt.scatter(X_train, y_train, color='red')
+plt.plot(X_train,lregressor.predict(X_train),color='blue')
+plt.title('Salary vs Experience (Training data)')
+plt.xlabel('Experience(Years)')
+plt.ylabel('Salary($)')
+plt.show()
+
