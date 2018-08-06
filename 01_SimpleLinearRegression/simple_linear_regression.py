@@ -45,3 +45,12 @@ plt.xlabel('Experience(Years)')
 plt.ylabel('Salary($)')
 plt.show()
 
+# Visualize the predictions on Test with graph for comparison
+plt.scatter(X_test, y_test, color='red')
+# Point to note here is that the regressor is the same
+plt.plot(X_train,lregressor.predict(X_train),color='blue')
+
+plt.title('Salary vs Experience (Test data)')
+plt.xlabel('Experience(Years)')
+plt.ylabel('Salary($)')
+plt.show()
