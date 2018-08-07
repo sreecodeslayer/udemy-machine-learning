@@ -273,3 +273,9 @@ Warnings:
 [2] The condition number is large, 1.65e+05. This might indicate that there are
 strong multicollinearity or other numerical problems.
 """
+
+
+'''
+As per the summary, we can conclude here that the Profit is decided by the 
+R&D expense of the startup
+'''
