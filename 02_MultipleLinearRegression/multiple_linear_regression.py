@@ -22,3 +22,7 @@ X = ohe.fit_transform(X).toarray()
 # but its always a good practice to avoid one dummy variable from the total
 # So take away feature at index : 0
 X = X[:,1:]
+
+# Train and test split the dataset
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
