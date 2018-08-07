@@ -26,3 +26,10 @@ X = X[:,1:]
 # Train and test split the dataset
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+
+# Since the Regression library of sklearn takes care of Feature scaling.
+# we will move onto fitting the regression model with our train dataset
+from sklearn.linear_model import LinearRegression
+lregressor = LinearRegression()
+lregressor.fit(X_train,y_train)
+y_pred = lregressor.predict(X_test)
